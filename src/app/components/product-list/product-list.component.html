@@ -1,0 +1,26 @@
+<div class="container mt-5">
+  <h2 class="mb-4">Lista de Productos</h2>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th>Precio</th>
+        <th>Categoria</th>
+        <th>Fecha de agregado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td>{{ product.id_producto}}</td>
+        <td>{{ product.nombre}}</td>
+        <td>{{ product.descripcion }}</td>
+        <td>{{ product.precio | currency }}</td>
+        <td>{{ product.categoria }}</td>
+        <td>{{ product.fecha_agregado }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
